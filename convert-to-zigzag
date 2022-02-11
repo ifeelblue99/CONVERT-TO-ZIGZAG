@@ -1,0 +1,23 @@
+const str = "CONVERTOZIGZAG"
+
+function zigzag(str){
+  
+  let row1 = []
+  for (var i = 0; i < str.length; i+=4) {
+    row1.push(str.charAt(i)+"   ")
+    
+  }
+  let row2 = []
+  for (var i = 1; i < str.length; i+=2) {
+    row2.push(str.charAt(i)+" ")
+    
+  }
+  let row3 = []
+  for (var i = 2; i < str.length; i+=4) {
+    row3.push(str.charAt(i)+"   ")
+    
+  }
+  
+ return `${row1.join("")}\n${row2.join("")}\n${row3.join("")}`
+}
+console.log(zigzag(str))
